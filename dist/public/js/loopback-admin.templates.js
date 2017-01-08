@@ -51,19 +51,6 @@ angular.module('loopback-admin.theme', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('templates/common/social-buttons.tpl.html',
-    "<div md-ink-ripple ng-click=\"social.loginWith('facebook')\" class=\"social-icon facebook\">\n" +
-    "    <md-tooltip>{{:: 'loginWithFacebook' | text }}</md-tooltip>\n" +
-    "</div>\n" +
-    "\n" +
-    "<div md-ink-ripple ng-click=\"social.loginWith('google')\" class=\"social-icon googleplus\">\n" +
-    "    <md-tooltip>{{:: 'loginWithGoogle' | text }}</md-tooltip>\n" +
-    "</div>\n" +
-    "\n" +
-    "<div md-ink-ripple ng-click=\"social.loginWith('twitter')\" class=\"social-icon twitter\">\n" +
-    "    <md-tooltip>{{:: 'loginWithTwitter' | text }}</md-tooltip>\n" +
-    "</div>\n"
-  );
 
 
   $templateCache.put('templates/common/toolbar.html',
@@ -543,7 +530,6 @@ angular.module('loopback-admin.theme', []).run(['$templateCache', function($temp
     "\n" +
     "            <span flex></span>\r" +
     "\n" +
-    "            <md-button ui-sref=\"register\">{{:: 'register' | text }}</md-button>\r" +
     "\n" +
     "            <md-button ui-sref=\"login\" class=\"login\">{{:: 'login' | text }}</md-button>\r" +
     "\n" +
@@ -607,9 +593,7 @@ angular.module('loopback-admin.theme', []).run(['$templateCache', function($temp
     "        <md-button type=\"submit\" class=\"md-primary md-raised\">{{:: 'login' | text }}</md-button>\n" +
     "    </md-container>\n" +
     "</form>\n" +
-    "\n" +
-    "<p>{{:: 'noAccount' | text }} <a ui-sref=\"register\">{{:: 'registerHere' | text }}</a> {{:: 'orLoginWith' | text }}</p>\n" +
-    "<cms-social-buttons></cms-social-buttons>"
+    "\n" 
   );
 
 
@@ -664,9 +648,7 @@ angular.module('loopback-admin.theme', []).run(['$templateCache', function($temp
     "    </md-input-container>\n" +
     "\n" +
     "    <md-container flex layout=\"row\">\n" +
-    "        <cms-social-buttons></cms-social-buttons>\n" +
     "        <span flex></span>\n" +
-    "        <md-button type=\"submit\" class=\"md-primary md-raised\">{{:: 'register' | text }}</md-button>\n" +
     "    </md-container>\n" +
     "\n" +
     "</form>\n" +
