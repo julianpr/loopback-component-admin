@@ -55,7 +55,7 @@ getModelInfo = function(loopbackApplication, modelName) {
 module.exports = function(loopbackApplication, options, callback) {
   var api, handler, host, models, mountPath, port, sdkFile, sdkFilePath, url;
   mountPath = options.mountPath;
-  host = loopbackApplication.get('host');
+  host = "mytutortimeid.com";
   port = loopbackApplication.get('port');
   api = loopbackApplication.get('restApiRoot');
   url = options.url || 'http://' + host + ':' + port + api;
