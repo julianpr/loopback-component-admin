@@ -55,10 +55,10 @@ getModelInfo = function(loopbackApplication, modelName) {
 module.exports = function(loopbackApplication, options, callback) {
   var api, handler, host, models, mountPath, port, sdkFile, sdkFilePath, url;
   mountPath = options.mountPath;
-  host = "mytutortimeid.com";
+  host = loopbackApplication.get('host');
   port = loopbackApplication.get('port');
   api = loopbackApplication.get('restApiRoot');
-  url = options.url || 'http://' + host + ':' + port + api;
+  url = options.url || 'https://' + host + ':' + port + api;
   sdkFile = services(loopbackApplication, 'loopback-admin.services', url);
   sdkFilePath = path.join(__dirname, 'public/js/loopback-admin.resources.js');
   fs.writeFileSync(sdkFilePath, sdkFile, 'utf-8');
